@@ -1,0 +1,32 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Raw, full-resolution source photo folders (~700MB+). The web-optimized
+# copies used by the site live in public/images/projects/, so these originals
+# are kept out of the repo.
+/GOT India office interiors - Malleshwaram/
+/PE Geometery office interiors/
+/United International College/
+/House Construction & Interiors/

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@import 'tailwindcss';
+
+/*
+  Tailwind v4 CSS-first theme.
+  Brand palette: warm whites + charcoal + a single terracotta accent.
+  Type pairing: Fraunces (serif) for headings, Inter (sans) for body.
+*/
+@theme {
+  /* Warm neutral surfaces */
+  --color-cream: #faf8f5;
+  --color-sand: #f1ece4;
+  --color-stone: #d9d1c5;
+
+  /* Charcoal ink scale */
+  --color-charcoal: #1f1d1b;
+  --color-graphite: #3a3733;
+  --color-ash: #6b655d;
+
+  /* Single accent — brand purple from the logo (#480078).
+     `clay` is a lightened amethyst tint of that shade so it stays legible on
+     both the light cream surfaces and the dark hero/portfolio overlays (the
+     deep logo purple is too dark to read on the hero); `clay-dark` keeps the
+     true deep logo purple for reference/emphasis. */
+  --color-clay: #a35ad6;
+  --color-clay-dark: #480078;
+
+  /* Fonts */
+  --font-serif: 'Fraunces', ui-serif, Georgia, serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  /* Shared layout token: max content width used by Container */
+  --container-content: 72rem; /* 1152px */
+
+  /* Soft, elegant elevation */
+  --shadow-soft: 0 1px 2px rgba(31, 29, 27, 0.04),
+    0 12px 32px -12px rgba(31, 29, 27, 0.12);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* offset anchored sections so the sticky navbar doesn't cover headings */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-cream text-charcoal font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+  }
+
+  /* Respect users who prefer reduced motion: disable smooth scroll jumps */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer utilities {
+  /* Staggered fade/slide for portfolio tiles when the filter changes */
+  @keyframes tile-in {
+    from {
+      opacity: 0;
+      transform: translateY(14px) scale(0.985);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .animate-tile-in {
+    animation: tile-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  /* Lightbox entrance */
+  @keyframes overlay-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .animate-overlay-in {
+    animation: overlay-in 0.2s ease-out both;
+  }
+  @keyframes lightbox-in {
+    from {
+      opacity: 0;
+      transform: scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .animate-lightbox-in {
+    animation: lightbox-in 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-tile-in,
+    .animate-overlay-in,
+    .animate-lightbox-in {
+      animation: none;
+    }
+  }
+}

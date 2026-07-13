@@ -143,4 +143,40 @@ export const projects = [
       '/images/projects/house-construction/16.jpg',
     ],
   },
+  {
+    id: 5,
+    title: '3 BHK Interiors',
+    category: 'Interior',
+    description:
+      'Complete 3 BHK apartment interiors — backlit feature walls, custom TV and storage units, and a warm, contemporary finish.',
+    cover: '/images/projects/3bhk-interiors/01.jpg',
+    images: [
+      '/images/projects/3bhk-interiors/01.jpg',
+      '/images/projects/3bhk-interiors/02.jpg',
+      '/images/projects/3bhk-interiors/03.jpg',
+      '/images/projects/3bhk-interiors/04.jpg',
+      '/images/projects/3bhk-interiors/05.jpg',
+      '/images/projects/3bhk-interiors/06.jpg',
+      '/images/projects/3bhk-interiors/07.jpg',
+      '/images/projects/3bhk-interiors/08.jpg',
+      '/images/projects/3bhk-interiors/09.jpg',
+      '/images/projects/3bhk-interiors/10.jpg',
+      '/images/projects/3bhk-interiors/11.jpg',
+    ],
+  },
+  {
+    id: 6,
+    title: '2BHK Interiors',
+    category: 'Interior',
+    description:
+      'Complete 2BHK apartment interiors — marble feature walls, custom joinery, and a warm, elegant living space.',
+    cover: '/images/projects/2bhk-interiors/01.jpg',
+    images: [
+      '/images/projects/2bhk-interiors/01.jpg',
+      '/images/projects/2bhk-interiors/02.jpg',
+      '/images/projects/2bhk-interiors/03.jpg',
+      '/images/projects/2bhk-interiors/04.jpg',
+      '/images/projects/2bhk-interiors/05.jpg',
+    ],
+  },
 ]

@@ -124,8 +124,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-cream/10 pt-6 text-sm text-cream/50">
-          © {new Date().getFullYear()} {brand.name}. All rights reserved.
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-2 border-t border-cream/10 pt-6 text-sm text-cream/50">
+          <span>© {new Date().getFullYear()} {brand.name}. All rights reserved.</span>
+          <span>GST - 29AFPPM7021R3ZI</span>
         </div>
       </Container>
     </footer>
